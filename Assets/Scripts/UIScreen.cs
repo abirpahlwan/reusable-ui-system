@@ -3,58 +3,65 @@ using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Reusable.UI {
-	[RequireComponent(typeof(Animator))]
-	[RequireComponent(typeof(CanvasGroup))]
-	public class UIScreen : MonoBehaviour {
-		
-		#region Variables
-		[Header("Main Properties")]
-		[SerializeField] private Selectable startSelectable;
-		
-		[Header("Screen Events")]
-		public UnityEvent onScreenStart = new UnityEvent();
-		public UnityEvent onScreenClose = new UnityEvent();
+namespace Reusable.UI
+{
+    [RequireComponent(typeof(Animator))]
+    [RequireComponent(typeof(CanvasGroup))]
+    public class UIScreen : MonoBehaviour
+    {
+        #region Variables
 
-		private Animator animator;
-		#endregion
+        [Header("Main Properties")]
+        [SerializeField] private Selectable startSelectable;
 
+        [Header("Screen Events")]
+        public UnityEvent onScreenStart = new UnityEvent();
+        public UnityEvent onScreenClose = new UnityEvent();
 
-		#region Unity Methods
-		void OnEnable() {
-			animator = GetComponent<Animator>();
-		}
-		
-		void Start() {
-			if (startSelectable) {
-				EventSystem.current.SetSelectedGameObject(startSelectable.gameObject);
-			}
-		}
-		#endregion
+        private Animator animator;
 
-		
-		#region Helper Methods
-		public virtual void StartScreen() {
-			if (onScreenStart != null) {
-				onScreenStart.Invoke();
-			}
+        #endregion
 
-			HandleAnimator("show");
-		}
+        
+        #region Unity Methods
 
-		public virtual void CloseScreen() {
-			if (onScreenClose != null) {
-				onScreenClose.Invoke();
-			}
+        void OnEnable() {
+            animator = GetComponent<Animator>();
+        }
 
-			HandleAnimator("hide");
-		}
+        void Start() {
+            if (startSelectable) {
+                EventSystem.current.SetSelectedGameObject(startSelectable.gameObject);
+            }
+        }
 
-		private void HandleAnimator(string trigger) {
-			if (animator) {
-				animator.SetTrigger(trigger);
-			}
-		}
-		#endregion
-	}
+        #endregion
+
+        
+        #region Helper Methods
+
+        public virtual void StartScreen() {
+            if (onScreenStart != null) {
+                onScreenStart.Invoke();
+            }
+
+            HandleAnimator("show");
+        }
+
+        public virtual void CloseScreen() {
+            if (onScreenClose != null) {
+                onScreenClose.Invoke();
+            }
+
+            HandleAnimator("hide");
+        }
+
+        private void HandleAnimator(string trigger) {
+            if (animator) {
+                animator.SetTrigger(trigger);
+            }
+        }
+
+        #endregion
+    }
 }

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{391E8385-4CE6-6858-C151-3567B27CF9A6}</ProjectGuid>
+    <ProjectGuid>{C174B7A2-22C2-66EC-5527-CC4DDF9B0EF6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,6 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\ScreenTypes\TimedUIScreen.cs" />
      <Compile Include="Assets\Scripts\UIScreen.cs" />
      <Compile Include="Assets\Scripts\UISystem.cs" />
  <Reference Include="UnityEngine.CoreModule">
