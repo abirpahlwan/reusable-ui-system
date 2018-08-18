@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\abirp\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_Reusable-UI-System.-1366998519.00" t="ExcludeRecursive" />
-    <e p="D:\Unity\Reusable-UI-System" t="IncludeRecursive">
+    <e p="C:\Users\Abir\.Rider2018.1\system\resharper-host\Local\Transient\ReSharperHost\v12\SolutionCaches\_Reusable-UI-System.-2007997603.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Abir\Desktop\Unity\Misc\UI + 2D\Reusable-UI-System" t="IncludeRecursive">
+      <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets\Scripts" t="Include">
+        <e p="Editor" t="Include">
+          <e p="UIMenu.cs" t="Include" />
+        </e>
         <e p="ScreenTypes" t="Include">
           <e p="TimedUIScreen.cs" t="Include" />
         </e>
