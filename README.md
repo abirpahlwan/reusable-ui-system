@@ -1,4 +1,4 @@
 # Reusable UI System
 
-Code for [Unity 2017 - Reusable UI System](https://www.youtube.com/playlist?list=PL5V9qxkY_RnJAZUTVXewQrJWbb5B7IU8y) by Indie - Pixel
+Code for [Unity 3D - Create a Reusable UI System](https://www.udemy.com/course/unity-2017-create-a-reusable-ui-system/) by Indie - Pixel
 
